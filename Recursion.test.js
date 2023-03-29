@@ -1,7 +1,7 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
-        return (number < dividedBy) ? 0 : 1 + division(number - dividedBy, dividedBy) ;
+        return (number < dividedBy || dividedBy === 0) ? 0 : 1 + division(number - dividedBy, dividedBy) ;
     // Write you logic here.
 }
 
@@ -11,7 +11,7 @@ pow(2,4) = 16
 */
 
 function pow(x, n) {
-    return (n === 1) ? x : x * pow(x, n - 1);
+    return (n === 0) ? 1 : x * pow(x, n - 1);
     // Write you logic here.
 }
 
@@ -24,7 +24,6 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 function fibonacci(n) {
     return (n === 0 || n === 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
     // Write you logic here.
-    
 }
 
 /* Optional 
